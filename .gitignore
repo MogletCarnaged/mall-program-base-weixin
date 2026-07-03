@@ -1,0 +1,20 @@
+# Java后端
+mall-server/target/
+mall-server/.idea/
+mall-server/*.iml
+mall-server/.mvn/wrapper/maven-wrapper.jar
+
+# 微信小程序前端
+mall-miniprogram/node_modules/
+mall-miniprogram/miniprogram_npm/
+mall-miniprogram/.DS_Store
+mall-miniprogram/project.private.config.json
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

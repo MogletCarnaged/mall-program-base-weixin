@@ -1,0 +1,71 @@
+/* pages/list/list.wxss */
+.list {
+    padding: 30rpx;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20rpx;
+}
+.list-item {
+    border-radius: 30rpx;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 16rpx;
+    padding: 20rpx;
+}
+.list-item>.avatar {
+    width: 300rpx;
+    height: 300rpx;
+}
+.list-item>.title {
+    font-size: 28rpx;
+    font-weight: bold;
+    align-self: flex-start;
+    color: #666666;
+}
+.list-item>.series {
+    color: #9f9f9f;
+}
+.list-item>.price {
+    font-size: 35rpx;
+    color: #CF0A2C;
+}
+.tip{
+    height: 200rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9f9f9f;
+    background-color: #f0f2f3;
+}
+.self-operated {
+    position: absolute;
+    top: 10rpx;
+    left: 10rpx;
+    background-color: red;
+    color: white;
+    font-size: 24rpx;
+    padding: 6rpx 12rpx;
+    border-radius: 8rpx;
+    z-index: 1; /* 确保在图片等上层显示 */
+  }
+  .self-operated-tag {
+    background-color: red;
+    color: white;
+    font-size: 25rpx;
+    /* 关键：左右内边距大，上下内边距小，实现“左右长、上下短” */
+    padding: 8rpx 12rpx; 
+    border-radius: 4rpx;
+    /* 强制文字不换行（可选，防止极端情况） */
+    white-space: nowrap; 
+    /* 确保是行内元素，与文字横向排列 */
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+  }  
+  .title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8rpx; /* 图标和文字的间距 */
+  }

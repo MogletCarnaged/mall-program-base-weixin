@@ -1,0 +1,18 @@
+<view class="page-container">
+  <view class="profile">
+    <image class="image" src="/images/mall-profile-user.png" mode=""/>
+    <text>{{nickname}}</text>
+  </view>
+  <view class="details">
+    <view class="details-list" wx:for="{{services}}" wx:key="serviceName" wx:for-item="item">
+      <view class = "service-title">{{item.serviceName}}</view>
+      <view class="service-list">
+        <view class = "service" wx:for="{{item.list}}" wx:key="id"wx:for-item="service">
+        <image src="{{service.avatar}}" mode=""/>
+        <text>{{service.name}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+</view>

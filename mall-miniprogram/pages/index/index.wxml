@@ -1,0 +1,66 @@
+<!-- 顶部导航栏 -->
+<view class="top-nav">
+  <view class="nav-item {{currentTab === 'tejia' ? 'active' : ''}}" bindtap="switchTab" data-tab="tejia">特价</view>
+  <view class="nav-item {{currentTab === 'shouye' ? 'active' : ''}}" bindtap="switchTab" data-tab="shouye">首页</view>
+  <view class="nav-item {{currentTab === 'miaosong' ? 'active' : ''}}" bindtap="switchTab" data-tab="miaosong">秒送外卖</view>
+  <view class="nav-item {{currentTab === 'xinpin' ? 'active' : ''}}" bindtap="switchTab" data-tab="xinpin">新品</view>
+</view>
+
+<!-- 搜索栏 -->
+<view class="search-bar">
+  <van-icon name="scan" size="32rpx" color="#999" class="search-icon" />
+  <input class="search-input" bind:tap="goSearchPage" placeholder="请输入..." />
+  <van-icon name="photograph" size="32rpx" color="#999" class="camera-icon"/>
+  <view class="search-btn" bind:tap="goSearchPage">搜索</view>
+</view>
+
+<!-- 分类导航 -->
+<view class="category-nav">
+  <view class="nav-item {{currentSubTab === 'tuijian' ? 'active' : ''}}" bindtap="switchSubTab" data-tab="tuijian">推荐</view>
+  <view class="nav-item {{currentSubTab === 'guobutie' ? 'active' : ''}}" bindtap="switchSubTab" data-tab="guobutie">国家补贴</view>
+  <view class="nav-item {{currentSubTab === 'shipin' ? 'active' : ''}}" bindtap="switchSubTab" data-tab="shipin">食品</view>
+  <view class="nav-item {{currentSubTab === 'nanzhuang' ? 'active' : ''}}" bindtap="switchSubTab" data-tab="nanzhuang">男装</view>
+  <view class="nav-item {{currentSubTab === 'nüzhuang' ? 'active' : ''}}" bindtap="switchSubTab" data-tab="nvzhuang">女装</view>
+  <view class="nav-item {{currentSubTab === 'shouji' ? 'active' : ''}}" bindtap="switchSubTab" data-tab="shouji">手机</view>
+</view>
+
+<!-- 功能入口 -->
+<view class="func-grid">
+  <view class="func-item" wx:for="{{funcList}}" wx:key="index">
+    <image class="func-img" src="{{item.iconPath}}" mode="aspectFit" />
+    <text class="func-text">{{item.textDesc}}</text>
+  </view>
+</view>
+
+<!-- 商品模块：国家补贴×百亿补贴 -->
+<view class="goods-section">
+  <view class="section-title">国家补贴×百亿补贴</view>
+  <view class="goods-list">
+    <view class="goods-item" wx:for="{{subsidyGoods}}" wx:key="index">
+      <image class="goods-img" src="{{item.image}}" mode="aspectFill" />
+      <text class="goods-price">¥{{item.price}} 补贴价</text>
+    </view>
+  </view>
+</view>
+
+<!-- 商品模块：9.9包邮 -->
+<view class="goods-section">
+  <view class="section-title">9.9包邮</view>
+  <view class="goods-list">
+    <view class="goods-item" wx:for="{{postageGoods}}" wx:key="index">
+      <image class="goods-img" src="{{item.image}}" mode="aspectFill" />
+      <text class="goods-price">¥{{item.price}}</text>
+    </view>
+  </view>
+</view>
+
+<!-- 商品模块：品质生活 -->
+<view class="goods-section">
+  <view class="section-title">品质生活</view>
+  <view class="quality-list">
+    <view class="quality-item" wx:for="{{qualityGoods}}" wx:key="index">
+      <image class="quality-img" src="{{item.image}}" mode="aspectFill" />
+      <text class="quality-text">{{item.text}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,30 @@
+<view class="page-centainer">
+    <view class="page-header">
+        <view class="title">分类</view>
+        <van-icon class="search" name="search" size="40px" bind:click="goSearchPage"></van-icon>
+    </view>
+      <view class="page-body">
+          <view class="left hide-scrollbar">
+              <view wx:for="{{categoryList}}" wx:for-item="item" wx:key="id" data-id="{{item.id}}" bind:tap="tapHandler"
+              class="category-item">
+                  <text class="category-item-title {{item.id===activeId  ? 'active' : '' }}">{{item.name}}</text>
+              </view>
+          </view>
+          <view class="right hide-scrollbar">
+          <van-empty description="暂无商品，敬请期待" wx:if="{{series.length===0}}"/>
+          <block wx:else>
+              <view class="series" wx:for="{{series}}" wx:key="seriesName" wx:for-item="item">
+                  <view class="series-title">
+                    {{item.seriesName}}
+                  </view>
+                  <view class="series-product-list">
+                      <view class="product" wx:for="{{item.list}}" wx:key="id" wx:for-item="product">
+                          <image src="{{product.avatar}}" mode=""/>
+                          <text>{{product.name}}</text>
+                      </view>                  
+                  </view>
+            </view>
+        </block>
+      </view>
+    </view>
+</view>

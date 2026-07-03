@@ -1,0 +1,19 @@
+<!--pages/list/list.wxml-->
+<view class="list">
+        <view class="list-item" wx:for="{{list}}" wx:key="id">
+                <image class="avatar" src="{{item.avatar}}" mode=""/>
+                <view class="price">¥{{item.price}}.00</view>  
+                <view class="title-wrap">
+                <!-- 去掉 wx:if 条件，让每个列表项都显示自营标识 -->
+                <view class="self-operated-tag">自营</view> 
+                    <view class="title">{{item.name}}</view>
+                 </view>
+                <view class="series">{{item.series}}</view> 
+        </view>
+</view>
+<view class="tip">
+        <text wx:if="{{loading}}">加载中...</text>
+        <text wx:elif="{{list.length===0}}">暂无此商品</text>
+        <text wx:elif="{{hasMore}}">上拉加载更多</text>
+        <text wx:else>已到达底部</text>
+</view>

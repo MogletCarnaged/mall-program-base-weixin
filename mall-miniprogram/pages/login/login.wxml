@@ -1,0 +1,33 @@
+<view class="login-container">
+    <view class="login-header">
+        <image class="logo" src="/images/mall-logo.png" mode="aspectFit"></image>
+        <text class="title">欢迎登录宇乐星商城</text>
+        <view class="login-tip">
+          <text>Tip: 请授权微信登录以使用完整功能</text>
+        </view>
+    </view>
+      <view class="userinfo" wx:if="{{newUser}}">
+          <view class="userinfo-title">检测到您是新用户，请完善您的昵称</view>
+          <van-field
+              disabled="{{loading}}"
+              type="nickname"
+              label="昵称："
+              placeholder="选择微信昵称/输入新昵称"
+              error-message="{{nicknameErrorMessage}}"
+              bind:change="onNicknameChange"
+          />
+      </view>
+      <view class="button-group">
+          <van-button block color="#07C160" disabled="{{checked === false}}" loading="{{loading}}" bind:click="onLogin">
+              {{newUser ? "注册并登录" : "微信一键登录"}}
+          </van-button>
+      </view>
+    
+      <view class="agreement">
+          <checkbox class="checkbox" checked="{{checked}}" bind:tap="onCheckedChange" />
+          <text>我已阅读并同意</text>
+          <text class="link">《用户协议》</text>
+          <text>和</text>
+          <text class="link">《隐私政策》</text>
+      </view>
+</view>

@@ -1,0 +1,145 @@
+/* 顶部导航 */
+.top-nav {
+  display: flex;
+  background-color: #fff;
+  border-bottom: 1px solid #f5f5f5;
+}
+.nav-item {
+  flex: 1;
+  text-align: center;
+  font-size: 32rpx;
+  color: #333;
+  padding: 20rpx 0;
+}
+.nav-item.active {
+  color: #EF4136;
+  font-weight: bold;
+  border-bottom: 4rpx solid #EF4136;
+}
+
+/* 搜索栏 */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 10rpx 20rpx;
+  margin: 10rpx 0;
+}
+.search-icon, .camera-icon {
+  width: 60rpx;
+  display: flex;
+  justify-content: center;
+}
+.search-input {
+  flex: 1;
+  height: 60rpx;
+  margin: 0 20rpx;
+  padding: 0 20rpx;
+  background-color: #f5f5f5;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+}
+.search-btn {
+  padding: 10rpx 30rpx;
+  background-color: #EF4136;
+  color: #fff;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+}
+
+/* 分类导航 */
+.category-nav {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  background-color: #fff;
+  padding: 10rpx 0;
+}
+
+.nav-item {
+  white-space: nowrap; 
+  flex-shrink: 1; 
+  margin: 0 8rpx;
+  padding: 5rpx 0;
+  font-size: 32rpx;
+  color: #333;        
+}
+/* 功能入口 */
+.func-grid {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  padding: 20rpx;
+}
+.func-item {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.func-img {
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 10rpx;
+}
+.func-text {
+  font-size: 24rpx;
+  color: #333;
+}
+
+/* 商品模块 */
+.goods-section {
+  background-color: #fff;
+  margin: 10rpx 0;
+}
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  padding: 20rpx;
+}
+.goods-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 20rpx 20rpx 20rpx;
+}
+.goods-item {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.goods-img {
+  width: 100%;
+  height: 300rpx;
+  border-radius: 10rpx;
+}
+.goods-price {
+  font-size: 28rpx;
+  color: #f00;
+  margin-top: 10rpx;
+}
+.quality-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 20rpx 20rpx 20rpx;
+}
+.quality-item {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.quality-img {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 10rpx;
+}
+.quality-text {
+  font-size: 24rpx;
+  color: #333;
+  margin-top: 10rpx;
+}

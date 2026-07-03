@@ -1,0 +1,14 @@
+<view class="page-container">
+        <view class="button-border">
+        <van-search
+        shape="round"
+        background="#f1f3f5"
+        placeholder="请输入关键字.."
+        bind:change="searchChangeHandler"
+        bind:search="goListPage"
+        use-action-slot
+        >
+        <view slot="action" class="search-btn" bind:tap="goListPage">搜索</view><!--此处格式应当变化-->
+        </van-search>
+        </view>
+        </view>
